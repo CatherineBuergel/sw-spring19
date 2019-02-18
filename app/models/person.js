@@ -9,6 +9,8 @@ export default class Person {
     }
 
 
+
+
     get BasicTemplate() {
         return `<li onclick="app.controllers.swController.getPerson('${this.url}')" class="${this.gender}">${this.name}</li>`
     }
