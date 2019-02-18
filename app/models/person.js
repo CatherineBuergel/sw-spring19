@@ -12,12 +12,12 @@ export default class Person {
 
 
     get BasicTemplate() {
-        return `<li onclick="app.controllers.swController.getPerson('${this.url}')" class="${this.gender}">${this.name}</li>`
+        return `<p onclick="app.controllers.swController.getPerson('${this.url}')" class="${this.gender}">${this.name}</p>`
     }
 
     get DetailedTemplate() {
         return `
-        <h3>${this.name}</h3>
+        <h1>${this.name}</h1>
         <p>Hair: ${this.hairColor}</p>
         <p>Eyes: ${this.eyeColor}</p>
         <p>Movies: ${this.movies}</p>

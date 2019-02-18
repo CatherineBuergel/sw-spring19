@@ -9,12 +9,12 @@ export default class Planet {
   }
 
   get BasicTemplate() {
-    return `<li class="btn btn-success" onclick="app.controllers.swController.getPlanet('${this.url}')">${this.name}</li>`
+    return `<p onclick="app.controllers.swController.getPlanet('${this.url}')">${this.name}</p>`
   }
 
   get DetailedTemplate() {
     return `
-        <h3>${this.name}</h3>
+        <h1>${this.name}</h1>
         <p>Terrain: ${this.terrain}</p>
         <p>Climate: ${this.climate}</p>
         <p>Gravity: ${this.gravity}</p>
