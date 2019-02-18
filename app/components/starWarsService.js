@@ -1,3 +1,4 @@
+// @ts-nocheck
 //private
 import Person from "../models/person.js";
 import Planet from "../models/planet.js"

@@ -13,8 +13,8 @@ function drawPeople() {
     //handles people list
     document.getElementById('sw-info').innerHTML = template
     document.getElementById('buttons').innerHTML = `
-    <button ${_swService.Previous ? '' : 'disabled'} onclick="app.controllers.swController.getPeople('${_swService.Previous}')">Previous</button>
-    <button ${_swService.Next ? '' : 'disabled'} onclick="app.controllers.swController.getPeople('${_swService.Next}')">Next</button>
+    <button ${_swService.Previous ? '' : 'disabled'} class="btn btn-success" onclick="app.controllers.swController.getPeople('${_swService.Previous}')">Previous</button>
+    <button ${_swService.Next ? '' : 'disabled'} class="btn btn-success" onclick="app.controllers.swController.getPeople('${_swService.Next}')">Next</button>
     `
 }
 
@@ -23,7 +23,7 @@ function drawActivePerson() {
 }
 
 function drawPeopleButton() {
-    let template = `<button onclick="app.controllers.swController.triggerPeople()">People</button>`
+    let template = `<button class="btn btn-success" onclick="app.controllers.swController.triggerPeople()">People</button>`
     document.getElementById('people-button').innerHTML = template
 
 }
@@ -38,8 +38,8 @@ function drawPlanets() {
     //handles planet list
     document.getElementById('sw-info').innerHTML = template
     document.getElementById('buttons').innerHTML = `
-    <button ${_swService.PreviousPlanet ? '' : 'disabled'} onclick="app.controllers.swController.getPlanets('${_swService.PreviousPlanet}')">Previous</button>
-    <button ${_swService.NextPlanet ? '' : 'disabled'} onclick="app.controllers.swController.getPlanets('${_swService.NextPlanet}')">Next</button>
+    <button ${_swService.PreviousPlanet ? '' : 'disabled'} class="btn btn-success" onclick="app.controllers.swController.getPlanets('${_swService.PreviousPlanet}')">Previous</button>
+    <button ${_swService.NextPlanet ? '' : 'disabled'} class="btn btn-success" onclick="app.controllers.swController.getPlanets('${_swService.NextPlanet}')">Next</button>
     `
 }
 
@@ -47,7 +47,7 @@ function drawActivePlanet() {
     document.getElementById('active-item').innerHTML = _swService.ActivePlanet.DetailedTemplate
 }
 function drawPlanetsButton() {
-    let template = `<button onclick="app.controllers.swController.triggerPlanets()">Planet</button>`
+    let template = `<button class="btn btn-success" onclick="app.controllers.swController.triggerPlanets()">Planet</button>`
     document.getElementById('planet-button').innerHTML = template
 
 }
@@ -74,7 +74,6 @@ export default class StarWarsController {
         _swService.getAllApiPeople(url)
     }
     getPerson(url) {
-        debugger
         _swService.getOneApiPerson(url)
     }
 
